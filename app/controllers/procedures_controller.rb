@@ -7,7 +7,7 @@ class ProceduresController < ApplicationController
 
   # GET: /procedures/new
   get "/procedures/new" do
-    erb :"/procedures/new.html"
+    erb :"/procedures/new"
   end
 
   # POST: /procedures
