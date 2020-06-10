@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20200610141453) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "hitories", force: :cascade do |t|
+  create_table "histories", force: :cascade do |t|
     t.string   "doctor_desc"
     t.string   "doctor_name"
     t.string   "age_at_visit"

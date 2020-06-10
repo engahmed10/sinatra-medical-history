@@ -1,6 +1,6 @@
-class CreateHitories < ActiveRecord::Migration
+class CreateHistories < ActiveRecord::Migration
   def change
-    create_table :hitories do |t|
+    create_table :histories do |t|
       t.string :doctor_desc 
       t.string :doctor_name
       t.string :age_at_visit
