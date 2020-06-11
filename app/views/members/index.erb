@@ -2,7 +2,7 @@
 <br>
 <div>
 <h2><% Member.all.each do |member| %>
-    <a href="/"><%=member.name%></a><br>
+    <a href="/members/show/<%=member.id%>"><%=member.name%></a><br>
 <%end%></h2>
 </div>
 <br>
