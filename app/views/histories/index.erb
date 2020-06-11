@@ -1,0 +1,10 @@
+<% @histories.each do |his| %>
+    <li> <% his.doctor_name %></li>
+    <li> <% his.doctor_desc %> </li>
+   <li> <% his.age_at_visit %> </li>
+     <li><%his.date%></li>
+<%end%>
+<br><br>
+
+<a href="/historie/new">create history</a>
+
