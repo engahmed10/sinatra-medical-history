@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20200610141453) do
     t.string   "name"
     t.string   "proce_doctor"
     t.string   "hospital"
+    t.date     "date_porc"
     t.string   "desc"
     t.integer  "age_at_proc"
     t.integer  "member_id"
