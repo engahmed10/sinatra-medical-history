@@ -17,10 +17,10 @@ class UsersController < ApplicationController
     end 
     
     post '/signup'  do
-       if params[:username] == "" || params[:email] == "" || params[:password_digest] == ""
+       if params[:username] == "" || params[:email] == "" || params[:password] == ""
           redirect '/signup'
        end
-       @user =User.create(username:params[:username],email:params[:email],password_digest:params[:password_digest])
+       @user =User.create(username:params[:username],email:params[:email],password:params[:password])
        session[:user_id]=@user.id 
       redirect "/members"
     end
@@ -38,12 +38,12 @@ class UsersController < ApplicationController
     end
 
     post "/login"  do
-        if params[:username] == "" ||  params[:password_digest] == ""
+        if params[:username] == "" ||  params[:password] == ""
             redirect '/login'
         end
-        @user=User.find_by(username:params[:username])
-        if @user && @user.authenticate(params[:password_digest]) 
-            session[:password_digest] = @user.id
+        user=User.find_by(username:params[:username])
+        if user && user.authenticate(params[:password]) 
+            session[:password] = @user.id
            redirect '/members'
         else
            redirect '/login'
