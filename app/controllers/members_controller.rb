@@ -1,7 +1,8 @@
 class MembersController < ApplicationController
 
 get '/members'  do
-"hello user"
+
+    erb :'members/index'
 end
 
 end

@@ -7,8 +7,8 @@ end
 
 
 use UsersController
+use MembersController
 use DiseasesController
 use HistoriesController
-use MembersController
 use ProceduresController
 run ApplicationController

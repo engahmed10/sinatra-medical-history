@@ -24,7 +24,7 @@ class UsersController < ApplicationController
        session[:user_id]=@user.id 
       redirect "/members"
     end
-    
+
     ###login
     get '/login'  do
         if  Helpers.is_logged_in?(session)
@@ -42,6 +42,11 @@ class UsersController < ApplicationController
         else
            redirect '/login'
         end
+    end
+
+    get '/logout'  do  
+        session.destroy
+        redirect '/'
     end
 
 
