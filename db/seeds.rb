@@ -1,5 +1,5 @@
-user=User.create(username:"Ahmed",password_digest:"zmzmzm",email:"eng@yahoo.com")
-user=User.create(username:"tom",password_digest:"xxxx",email:"ccc@yahoo.com")
+user=User.create(username:"Ahmed",password:"zmzmzm",email:"eng@yahoo.com")
+user=User.create(username:"tom",password:"wers",email:"ccc@yahoo.com")
 member=Member.create(name:"ali",order_age:3,kinship:"brother")
 member=Member.create(name:"helen",order_age:5,kinship:"sister")
 history=History.create(doctor_desc:"flu,need to get rest",doctor_name:"john",date:03/11/2019,age_at_visit:15)
