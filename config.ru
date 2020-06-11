@@ -5,9 +5,10 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 
-use MemberController
-use DiseaseController
-use HistoryController
-use UserController
+
+use UsersController
+use DiseasesController
+use HistoriesController
+use MembersController
 use ProceduresController
 run ApplicationController

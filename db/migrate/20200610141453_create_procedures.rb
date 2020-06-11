@@ -1,4 +1,4 @@
-class CreateProcedures < ActiveRecord::Migration[5.1]
+class CreateProcedures < ActiveRecord::Migration
   def change
     create_table :procedures do |t|
       t.string :name

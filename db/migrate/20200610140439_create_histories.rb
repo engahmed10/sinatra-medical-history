@@ -1,4 +1,4 @@
-class CreateHistories < ActiveRecord::Migration[5.1]
+class CreateHistories < ActiveRecord::Migration
   def change
     create_table :histories do |t|
       t.string :doctor_desc 

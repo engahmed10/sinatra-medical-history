@@ -1,0 +1,10 @@
+<h1>welcome!</h1>
+<div>
+<%if Helpers.is_logged_in?(session) %>
+   <a href="/members">Members </a>
+<%else%>
+   <a href="/signup">Sign up</a>
+   <br>or<br>
+   <a href="/login">Log in</a>
+   <%end%>
+</div>
