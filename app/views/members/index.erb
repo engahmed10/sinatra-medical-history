@@ -1,3 +1,9 @@
-<%=Member.all.first.name%><br><br>
-
-<a href='/logout'>logout</a>
+<h1>Family Members</h1>
+<br>
+<div>
+<h2><% Member.all.each do |member| %>
+    <a href="/"><%=member.name%></a><br>
+<%end%></h2>
+</div>
+<br>
+<h4><a href='/logout'>logout</a></h4>
