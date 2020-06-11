@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     end 
     
     post '/signup'  do
-       if params[:username] == "" || params[:email] == ""||params[:password_digest] == ""
+       if params[:username] == "" || params[:email] == "" || params[:password_digest] == ""
           redirect '/signup'
        end
        @user =User.create(username:params[:username],email:params[:email],password_digest:params[:password_digest])
@@ -27,17 +27,23 @@ class UsersController < ApplicationController
 
     ###login
     get '/login'  do
+
         if  Helpers.is_logged_in?(session)
             redirect "/members"
         else
+
            erb :"users/login"
         end
      
     end
 
     post "/login"  do
+        if params[:username] == "" ||  params[:password_digest] == ""
+            redirect '/login'
+        end
         @user=User.find_by(username:params[:username])
-        if session[:user_id] == @user.id
+        if @user && @user.authenticate(params[:password_digest]) 
+            session[:password_digest] = @user.id
            redirect '/members'
         else
            redirect '/login'
