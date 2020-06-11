@@ -43,7 +43,7 @@ class UsersController < ApplicationController
         end
         user=User.find_by(username:params[:username])
         if user && user.authenticate(params[:password]) 
-            session[:password] = @user.id
+           session[:user_id] = @user.id
            redirect '/members'
         else
            redirect '/login'
