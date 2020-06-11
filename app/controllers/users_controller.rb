@@ -22,12 +22,10 @@ class UsersController < ApplicationController
        end
        @user =User.create(username:params[:username],email:params[:email],password_digest:params[:password_digest])
        session[:user_id]=@user.id 
-      # @user.save
       redirect "/members"
     end
+    
     ###login
-
-
     get '/login'  do
         if  Helpers.is_logged_in?(session)
             redirect "/members"
@@ -44,7 +42,6 @@ class UsersController < ApplicationController
         else
            redirect '/login'
         end
-
     end
 
 
