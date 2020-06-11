@@ -1,9 +1,9 @@
 <h1>Family Members</h1>
 <br>
 <div>
-<h2><% Member.all.each do |member| %>
+<h2> <% Member.all.each do |member| %>
     <a href="/members/show/<%=member.id%>"><%=member.name%></a><br>
-<%end%></h2>
+<%end%> </h2>
 </div>
 <br>
 <h4><a href='/logout'>logout</a></h4>

@@ -1,10 +1,11 @@
+<h1><%=@member.name%>'s history</h1><br>
 <% @histories.each do |his| %>
-    <li> <% his.doctor_name %></li>
-    <li> <% his.doctor_desc %> </li>
-   <li> <% his.age_at_visit %> </li>
-     <li><%his.date%></li>
+    <li> <%= his.doctor_name %></li>
+    <li> <%= his.doctor_desc %> </li>
+   <li> <%= his.age_at_visit %> </li>
+     <li><%= his.date%></li>
 <%end%>
 <br><br>
 
-<a href="/historie/new">create history</a>
+<a href="/histories/new/<%=@member.id%>">create new history for <%=@member.name%></a>
 
