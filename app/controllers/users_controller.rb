@@ -20,9 +20,15 @@ class UsersController < ApplicationController
        if params[:username] == "" || params[:email] == "" || params[:password] == ""
           redirect '/signup'
        end
-       @user =User.create(username:params[:username],email:params[:email],password:params[:password])
-       session[:user_id]= @user.id 
-       redirect "/members"
+       @user = User.new(username:params[:username],email:params[:email],password:params[:password])
+       
+       if @user.save
+           session[:user_id]= @user.id 
+           redirect "/members"
+       else
+           redirect '/signup' 
+       end
+       
     end
 
     ###login
@@ -31,7 +37,6 @@ class UsersController < ApplicationController
         if  Helpers.is_logged_in?(session)
             redirect "/members"
         else
-
            erb :"users/login"
         end
      

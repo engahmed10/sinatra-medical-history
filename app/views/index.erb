@@ -1,7 +1,8 @@
 <h2>Welcome Sinatra Medical Family History App!</h2>
 <div>
 <%if Helpers.is_logged_in?(session) %>
-   <a href="/members">Members </a>
+   <a href="/members">Members</a><br><br>
+   <a href="/logout">Log out</a>
 <%else%>
    <a href="/signup">Sign up</a>
    <br>or<br>

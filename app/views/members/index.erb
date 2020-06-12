@@ -1,8 +1,8 @@
 <h1>Family Members</h1>
 <br>
 <div>
-<h2> <% Member.all.each do |member| %>
-    <a href="/members/show/<%=member.id%>"><%=member.name%></a><br>
+<h2> <% @members.each do |member| %>
+    <a href="/histories/<%=member.id%>"><%=member.name%></a><br>
 <%end%> </h2>
 </div>
 <br>
