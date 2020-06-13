@@ -1,0 +1,8 @@
+<form  action="/members/<%= @member.id %>/histories/<%= @history.id %>" method="POST">
+<input type="hidden" id="hidden" name="_method" value="patch">
+<input type="text" name="doctor_desc" placeholder="doctor_desc">
+<input type="text" name="doctor_name"  placeholder="doctor name">
+<input type="text" name="age_at_visit"  placeholder="age_at_visit">
+<input type="text" name="date"  placeholder="date">
+<input type="submit"  value="update">
+</form>

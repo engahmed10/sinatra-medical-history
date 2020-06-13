@@ -4,7 +4,7 @@
      <li>  his age order in the family </li>
      <%= @member.order_age %><br>
     <li> his kinship to user:</li>
-    <%= @member.kinship %><br>
+    <%= @member.kinship %> <><br> 
  </ul>
 <br>
 <br>
@@ -15,11 +15,12 @@
      <%= his.doctor_name %>
      <%= his.doctor_desc %> 
    <%= his.age_at_visit %> 
-    <%= his.date%><br>
+    <%= his.date%>  &nbsp  <a href="/members/<%=@member.id%>/histories/<%=his.id%>/edit"> edit </a>  &nbsp     <a href="/"> delete </a>   <br>
 <%end%>
 <br><br>
 
 <a href="/members/<%=@member.id%>/histories/new">create new history for <%=@member.name%></a>
 <br><br>
 <a href="/members">members</a>
+
 

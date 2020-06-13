@@ -19,7 +19,6 @@ get '/members'  do
 end
 
 
-
 get '/members/new'  do
    
     erb :'members/new'
@@ -31,13 +30,14 @@ post '/members' do
         redirect '/login'
     end
     member=Member.create(name:params[:name],order_age:params[:order_age],kinship:params[:kinship])
-    @user = Helpers.current_user(session)
-    member.user = @user 
-    @user.members << member
-    member.save
-    @user.save
+    user = Helpers.current_user(session)
+    member.user = user 
+    user.members << member
     
     redirect '/members'
 end
+
+
+
 
 end
