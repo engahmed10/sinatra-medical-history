@@ -44,6 +44,14 @@ patch "/members/:id/histories/:id1"  do
 end
 
 
+delete "/members/:id/histories/:id1"  do
+    @member = Member.find(params[:id]) 
+    @history=History.find(params[:id1])
+    @history.destroy
+    redirect "/members/#{@member.id}/histories"
+end
+
+
 
 end
 

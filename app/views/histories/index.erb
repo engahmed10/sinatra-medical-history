@@ -4,18 +4,20 @@
      <li>  his age order in the family </li>
      <%= @member.order_age %><br>
     <li> his kinship to user:</li>
-    <%= @member.kinship %> <><br> 
+    <%= @member.kinship %> <br> 
  </ul>
 <br>
-<br>
-
  
 <h1><%=@member.name%>'s history</h1><br>
 <% @member.histories.each do |his| %>
      <%= his.doctor_name %>
      <%= his.doctor_desc %> 
    <%= his.age_at_visit %> 
-    <%= his.date%>  &nbsp  <a href="/members/<%=@member.id%>/histories/<%=his.id%>/edit"> edit </a>  &nbsp     <a href="/"> delete </a>   <br>
+    <%= his.date%>  &nbsp  <a href="/members/<%=@member.id%>/histories/<%=his.id%>/edit"> update </a>  
+    <form method="POST" action="/members/<%=@member.id%>/histories/<%=his.id%>">
+     <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
+     <input type="submit" value="delete">
+    </form>  <br>
 <%end%>
 <br><br>
 
