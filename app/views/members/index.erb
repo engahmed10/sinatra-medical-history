@@ -2,8 +2,13 @@
 <br>
 <div>
 <h2> <% @members.each do |member| %>
-    <a href="/histories/<%=member.id%>"><%=member.name%></a><br>
+    <a href='/members/<%= member.id %>/histories'> <%=member.name%></a><br>
 <%end%> </h2>
 </div>
 <br>
+<a href="/members/new">create more members</a>
+<br>
+<br>
 <h4><a href='/logout'>logout</a></h4>
+
+

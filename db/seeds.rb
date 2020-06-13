@@ -1,5 +1,4 @@
 us=User.create(username:"ahmed",email:"eng@yahoo.com",password:"man1")
-#user=User.create(username:"tom",password:"wers",email:"ccc@yahoo.com")
 
 member=Member.create(name:"Ahmed",order_age:1,kinship:"dad",user:us)
 member=Member.create(name:"Ghaliya",order_age:2,kinship:"wife",user:us)

@@ -1,5 +1,4 @@
-<% @member%>
-<form method="POST" action="/histories/<%=@member.id%>">
+<form method="POST" action="/members/<%= @member.id %>/histories">
 <input type="text"  name="doctor_name" placeholder="doctor name" >
 <input type="text" name="doctor_desc" placeholder="doctor desc" >
 <input type="text" name="age_at_visit" placeholder="age at visit" >
