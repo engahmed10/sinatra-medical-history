@@ -19,6 +19,11 @@ class Helpers
           end
       end
       @all_diseases
+   end  
+
+
+   def self.all_members(session)
+      all_members= self.current_user(session).members
    end
 
 end
