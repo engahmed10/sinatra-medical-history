@@ -3,4 +3,6 @@ class Disease < ActiveRecord::Base
  has_many :histories
  has_many :members, through: :history   
 
+
+ 
 end

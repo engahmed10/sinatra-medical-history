@@ -1,11 +1,18 @@
+<link rel="stylesheet" href="/stylesheets/main.css" />
+<div class="ahmed">
 <h2>Welcome Sinatra Medical Family History App!</h2>
-<div>
+<br><br>
 <%if Helpers.is_logged_in?(session) %>
    <a href="/members">Members</a><br><br>
    <a href="/logout">Log out</a>
 <%else%>
-   <a href="/signup">Sign up</a>
-   <br>or<br>
-   <a href="/login">Log in</a>
+   <p class="message">Not registered? <a href="/signup">Create an account</a></p>                                    
+   <br> 
+   <p class="message">Already registered? <a href="/login">Log in</a></p>
 <%end%>
+<br>
+<br>
+<br>
+
+
 </div>
