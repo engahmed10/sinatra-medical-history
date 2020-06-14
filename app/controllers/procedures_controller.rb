@@ -2,7 +2,7 @@ class ProceduresController < ApplicationController
 
   # GET: /procedures
   get "/procedures" do
-    erb :"/procedures/index.html"
+    erb :"/procedures/index"
   end
 
   # GET: /procedures/new
@@ -17,12 +17,12 @@ class ProceduresController < ApplicationController
 
   # GET: /procedures/5
   get "/procedures/:id" do
-    erb :"/procedures/show.html"
+    erb :"/procedures/show"
   end
 
   # GET: /procedures/5/edit
   get "/procedures/:id/edit" do
-    erb :"/procedures/edit.html"
+    erb :"/procedures/edit"
   end
 
   # PATCH: /procedures/5
