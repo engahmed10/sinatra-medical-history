@@ -1,1 +1,62 @@
-div.his_border {border-style: ridge;}
+  
+  div.his_border {border-style: ridge;}
+body{
+
+
+  background-color: rgb(145, 178, 194);
+  //background: url('https://www.sgu.edu/blog/medical/wp-content/uploads/sites/2/2017/12/med-specialties.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+  
+.index{
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  margin: 20%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-left: 60px;
+  border: 2px solid rgb(136, 52, 52);
+}
+
+
+.SorL-form{
+  width: 600px;
+  margin: auto;
+  border: 2px solid rgb(136, 52, 52);
+  padding: 2rem;
+  background: #ffffff;
+}
+
+.wrap {
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 15%;
+}
+.form-in{
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  width: 100%;
+  
+}
+.form-g{
+  margin-bottom: 2rem;
+}
+.form-b{
+  background: #69d2e7;
+  border: 1px solid #ddd;
+  color: #ffffff;
+  padding: 10px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.form-b:hover{
+  background: #0a3a49;
+}
+.form-h{
+  text-align: center;
+  margin-bottom : 2rem;
+}
