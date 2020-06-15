@@ -1,21 +1,24 @@
 <h3>Create new History :</h3>
 
 <form method="POST" action="/members/<%= @member.id %>/histories">
-<input type="text"  name="doctor_name" placeholder="doctor name" >
+
+<input type="text" name="doctor_name" placeholder="doctor name" >
 <input type="text" name="doctor_desc" placeholder="doctor desc" >
 <input type="text" name="age_at_visit" placeholder="age at visit" >
 <input type="text" name="date" placeholder="date" >
-
+<br>
 
 <h3>Choose from Existing Diseases :</h3>
-<% Helpers.all_desease(session).each do |disease|%>
-<input type ="checkbox"  name="history[disease_id]" id ="<%=disease.id%>" value ="<%=disease.id%>">
-<%=disease.name%><br>
+<% @diseases.each do |dis| %>
+<input type ="checkbox"  name="history[disease_id]"  id="<%= dis.id %>" value="<%= dis.id %>">
+<%=dis.name%><br>
+<%=dis.desc%><br>
 </input>
 <%end%>
 
-<h3>Or craete new disease :</h3>
+<h3> Or craete new disease :</h3>
 <input type="text" name="disease[name]">
+<input type="text" name="disease[desc]">
 
 <input type="submit" value="create">
 </form>

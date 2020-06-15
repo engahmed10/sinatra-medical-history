@@ -1,28 +1,38 @@
+<div class = "vertical">
 <ul>
- <li> Name of Member :</li>
-     <%= @member.name %><br>
-     <li>  his age order in the family </li>
-     <%= @member.order_age %><br>
-    <li> his kinship to user:</li>
-    <%= @member.kinship %> <br> 
- </ul>
+ <li> <strong>Name of Member :</strong></li>
+     <%= @member.name %>  &nbsp
+     <li><strong> Age order </strong></li> &nbsp
+     <%= @member.order_age %>
+     <li><strong> Kinship </strong></li>  &nbsp
+     <%= @member.kinship %> 
+</ul>
 <br>
- 
-<h1><%=@member.name%>'s history</h1><br>
-<% @member.histories.each do |his| %>
-     <%= his.doctor_name %>
-     <%= his.doctor_desc %> 
-   <%= his.age_at_visit %> 
-    <%= his.date%>  &nbsp  <a href="/members/<%=@member.id%>/histories/<%=his.id%>/edit"> update </a>  
+</div>
+<div class="his_border">
+ <h1><%=@member.name%>'s medical history </h1>
+<% @member.histories.each_with_index do |his,index| %>
+    <div class="his_border">
+    <%=index+1 %>&nbsp <strong>doctor name:</strong>&nbsp<%= his.doctor_name %> &nbsp
+    &nbsp&nbsp<strong> doctor description:</strong> &nbsp<%= his.doctor_desc %> &nbsp
+    &nbsp<strong> his age when he visit :</strong><%= his.age_at_visit %> &nbsp
+    &nbsp<strong> date: </strong><%= his.date%>  &nbsp  <a href="/members/<%=@member.id%>/histories/<%=his.id%>/edit"> update </a> &nbsp
     <form method="POST" action="/members/<%=@member.id%>/histories/<%=his.id%>">
-     <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
-     <input type="submit" value="delete">
-    </form>  <br>
+    <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete"> 
+    </form> 
+    <h4>disease type :</h4>
+    <%if his.disease != nil%>
+    &nbsp&nbsp<%= his.disease.name %>
+    <h4> disease description :</h4>
+    &nbsp&nbsp<%= his.disease.desc %><br><br>
+    <%end%><br></td>
+    </div>
 <%end%>
 <br><br>
-
 <a href="/members/<%=@member.id%>/histories/new">create new history for <%=@member.name%></a>
 <br><br>
 <a href="/members">members</a>
 
+</div> 
 
