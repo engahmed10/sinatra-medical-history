@@ -1,6 +1,6 @@
 <h3>This is all <%=@member.name%>'s Procedures index page.</h3>
 
-<% @member.procedure.each_with_index do |pro,index|%>
+<% @member.procedures.each_with_index do |pro,index|%>
 <div class="his_border"> 
 <%=index+1 %><br>
 <strong>Procedure Name :</strong> &nbsp <%=pro.name%><br>
@@ -16,7 +16,7 @@
 <h4> disease description :</h4>
 &nbsp&nbsp<%= pro.disease.desc %><br><br>
 
-&nbsp  <a href="/members/<%=@member.id%>/peocedures/<%=pro.id%>/edit"> update </a> &nbsp
+&nbsp  <a href="/members/<%=@member.id%>/procedures/<%=pro.id%>/edit"> update </a> &nbsp
 <form method="POST" action="/members/<%=@member.id%>/procedures/<%=pro.id%>">
 <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
 <input type="submit" value="delete"> 

@@ -10,7 +10,7 @@
 
 <h3>Choose from Existing Diseases :</h3>
 <% @diseases.each do |dis| %>
-<input type ="checkbox"  name="procedure[disease_id]"  id="<%= dis.id %>" value="<%= dis.id %>">
+<input type ="checkbox"  name="history[disease_id]"  id="<%= dis.id %>" value="<%= dis.id %>">
 <%=dis.name%><br>
 <%=dis.desc%><br>
 </input>
