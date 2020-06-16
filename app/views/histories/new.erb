@@ -1,6 +1,6 @@
 <h3>Create new History :</h3>
 
-<form method="POST" action="/members/<%= @member.id %>/histories">
+<form class="SorL-form" method="POST" action="/members/<%= @member.id %>/histories">
 
 <input type="text" name="doctor_name" placeholder="doctor name" >
 <input type="text" name="doctor_desc" placeholder="doctor desc" >
@@ -10,7 +10,7 @@
 
 <h3>Choose from Existing Diseases :</h3>
 <% @diseases.each do |dis| %>
-<input type ="checkbox"  name="history[disease_id]"  id="<%= dis.id %>" value="<%= dis.id %>">
+<input type ="checkbox"  name="procedure[disease_id]"  id="<%= dis.id %>" value="<%= dis.id %>">
 <%=dis.name%><br>
 <%=dis.desc%><br>
 </input>

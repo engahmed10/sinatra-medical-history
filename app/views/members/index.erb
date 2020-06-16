@@ -1,8 +1,8 @@
 <h1>Family Members</h1>
 <br>
 <div>
-<h2> <% @members.each do |member| %>
-    <a href='/members/<%= member.id %>/histories'> <%=member.name%></a><br>
+<h2> <% @members.each_with_index do |member,index| %>
+    <a href='/members/<%= member.id %>/histories'> <%=index+1%> - <%=member.name%><br></a><br>
 <%end%> </h2>
 </div>
 <br>

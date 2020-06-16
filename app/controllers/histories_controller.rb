@@ -26,7 +26,9 @@ post '/members/:id/histories' do
         @history.disease = diseases.select{ |dis| params["history"]["disease_id"].to_i == dis.id }.first     
      end
      @history.save 
-     @member.histories << @history 
+     @member.histories << @history
+
+     flash[:message] = "Successfully created history."
   redirect "/members/#{@member.id}/histories/#{@history.id}"
 end
 

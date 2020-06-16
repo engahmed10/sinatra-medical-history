@@ -1,9 +1,11 @@
   
-  div.his_border {border-style: ridge;}
+  div.his_border {
+    border-style: ridge;
+    border-width: 1px;
+    width: 50%;
+  }
 body{
-
-
-  background-color: rgb(145, 178, 194);
+ background-color: rgb(145, 178, 194);
   //background: url('https://www.sgu.edu/blog/medical/wp-content/uploads/sites/2/2017/12/med-specialties.jpg') no-repeat center center fixed;
   background-size: cover;
 }
@@ -19,7 +21,6 @@ body{
   padding-left: 60px;
   border: 2px solid rgb(136, 52, 52);
 }
-
 
 .SorL-form{
   width: 600px;

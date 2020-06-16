@@ -1,0 +1,16 @@
+
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
+
+
+<h1>This is the show page for an individual instance of your model.</h1>
+Name: &nbsp <%= @procedure.name%><br>
+description: &nbsp<%= @procedure.desc%><br>
+doctor name: &nbsp<%= @procedure.proce_doctor%><br>
+hospital name: &nbsp<%= @procedure.hospital%><br>
+procedure date: &nbsp<%= @procedure.date_porc%><br>
+age of patinet : &nbsp<%= @procedure.age_at_proc%><br>
+Disease type : &nbsp<%= @procedure.disease.name%><br>
+Disease description : &nbsp<%= @procedure.desc%><br>
+

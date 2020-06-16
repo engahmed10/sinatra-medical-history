@@ -1,4 +1,14 @@
+
+<div class ="wrap">
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
+
+
+
 <%=@history.doctor_name%><br>
 <%=@history.age_at_visit%>
 <br>
 <%=@history.disease.name%>
+
+</div>

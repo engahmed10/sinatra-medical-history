@@ -1,0 +1,30 @@
+<h1>Insert the form to create a new instance of your procedure.</h1>
+
+<form class="SorL-form" method="POST" action="/members/<%= @member.id %>/procedures">
+
+
+<input type="text" name="name" placeholder="name" >
+<input type="text" name="desc" placeholder="desc" >
+<input type="text" name="proce_doctor" placeholder="proce_doctor" >
+<input type="text" name="hospital" placeholder="hospital" >
+<input type="text" name="date_porc" placeholder="date_porc" >
+<input type="text" name="age_at_proc" placeholder="age at visit" >
+
+<br>
+
+<h3>Choose from Existing Diseases :</h3>
+<% @diseases.each do |dis| %>
+<input type ="checkbox"  name="procedure[disease_id]"  id="<%= dis.id %>" value="<%= dis.id %>">
+<%=dis.name%><br>
+<%=dis.desc%><br>
+</input>
+<%end%>
+
+<h3> Or craete new disease :</h3>
+<input type="text" name="disease[name]">
+<input type="text" name="disease[desc]">
+
+<input type="submit" value="create">
+
+
+</form>
