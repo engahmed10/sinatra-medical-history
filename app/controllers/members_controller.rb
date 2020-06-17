@@ -9,7 +9,7 @@ get '/members'  do
 
     @user = Helpers.current_user(session)
     @members = @user.members
-   
+  
     if @user.members == []       
         redirect '/members/new'
     else

@@ -1,4 +1,5 @@
-<h3>This is all <%=@member.name%>'s Procedures index page.</h3>
+<div class ="SorL-form">
+<h3>&nbsp &nbsp This is all <%=@member.name%>'s Procedures page</h3>
 
 <% @member.procedures.each_with_index do |pro,index|%>
 <div class="his_border"> 
@@ -16,7 +17,7 @@
 <h4> disease description :</h4>
 &nbsp&nbsp<%= pro.disease.desc %><br><br>
 
-&nbsp  <a href="/members/<%=@member.id%>/procedures/<%=pro.id%>/edit"> update </a> &nbsp
+<a href="/members/<%=@member.id%>/procedures/<%=pro.id%>/edit"><button> update </button></a> &nbsp
 <form method="POST" action="/members/<%=@member.id%>/procedures/<%=pro.id%>">
 <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
 <input type="submit" value="delete"> 
@@ -30,3 +31,4 @@
 <a href="/members/<%=@member.id%>/procedures/new">create new procedure for <%=@member.name%></a>
 <br><br>
 <a href="/members">members</a><br><br>
+</div>

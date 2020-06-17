@@ -1,6 +1,8 @@
+<div class ="SorL-form">
 <h1>Family Members</h1>
 <br>
-<div>
+
+<div class="his_border">
 <h2> <% @members.each_with_index do |member,index| %>
     <a href='/members/<%= member.id %>/histories'> <%=index+1%> - <%=member.name%><br></a><br>
 <%end%> </h2>
@@ -12,3 +14,4 @@
 <h4><a href='/logout'>logout</a></h4>
 
 
+</div>
