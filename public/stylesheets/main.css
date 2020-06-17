@@ -3,7 +3,7 @@
     border-style: ridge;
     width: 90%;
     line-height:20px;
-    border-width: 20px;
+    border-width: 10px;
   }
 
 a.link:hover {
@@ -15,7 +15,6 @@ body{
   margin: 0;
   padding: 0;
   background-color: rgb(145, 178, 194);
-
 }
 
 .index{

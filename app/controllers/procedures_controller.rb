@@ -40,9 +40,13 @@ class ProceduresController < ApplicationController
   end
 
   get "/members/:id/procedures/:id1" do
+
+    member=Member.find_by_id(params[:id])
+    authorize(member)
     @procedure = Procedure.find_by_id(params[:id1])
-    
+    authorize_procedure(member,@procedure)
     erb :"/procedures/show"
+
   end
 
   get "/members/:id/procedures/:id1/edit" do

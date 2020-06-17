@@ -38,7 +38,7 @@ get  "/members/:id/histories/:id1"  do
       @member = Member.find(params[:id]) 
       authorize(@member)
       @history=History.find(params[:id1])
-      
+      authorize_history(@member,@history)
       @disease = @history.disease  
   erb :'histories/show'
 end

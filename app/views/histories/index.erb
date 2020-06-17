@@ -1,10 +1,10 @@
  <div class ="SorL-form">
  <div>
       <strong>Name of Member :</strong>
-     <%= @member.name %>  &nbsp
-     <strong> Age order :</strong> &nbsp
-     <%= @member.order_age %>
-      <strong> Kinship :</strong> &nbsp
+     <%= @member.name %>  &nbsp ,
+     <strong> Age order :</strong> &nbsp 
+     <%= @member.order_age %> ,
+      <strong> Kinship :</strong> &nbsp 
      <%= @member.kinship %> 
 <br>
 </div>
@@ -15,7 +15,7 @@
 <div class="his_border">    
     <%=index+1 %>&nbsp <strong>doctor name:</strong>&nbsp<%= his.doctor_name %> &nbsp
     &nbsp&nbsp<strong> doctor description:</strong> &nbsp<%= his.doctor_desc %> &nbsp
-    &nbsp<strong> his age when he visit :</strong><%= his.age_at_visit %> &nbsp
+    &nbsp<strong> patient age :</strong><%= his.age_at_visit %> &nbsp
     &nbsp<strong> date: </strong><%= his.date%>  &nbsp   
     <h4>disease type :</h4>
     <%if his.disease != nil%>
@@ -36,7 +36,7 @@
 <a href="/members/<%=@member.id%>/histories/new">create new history for <%=@member.name%></a>
 <br><br>
 
-<h2><a href="/members/<%=@member.id%>/procedures">Show me <%=@member.name%>'s procedures</a></h2>
-<a href="/members">members</a><br><br>
+<h3><a href="/members/<%=@member.id%>/procedures">Show me <%=@member.name%>'s procedures</a></h3>
+<a href="/members">Go back to members</a><br><br>
 </div>
 

@@ -18,8 +18,13 @@ class ApplicationController < Sinatra::Base
         redirect "/members"  if member.user != Helpers.current_user(session)     
     end
 
-    def authorize_history(history)
-      redirect "/members"  if member.user != Helpers.current_user(session)
+    def authorize_history(member,history)
+      redirect "/members/#{member.id}/histories"  if histroy.member_id != member.id
+    end
+    
+    def  authorize_procedure(member,procedure)
+         
+         redirect "/members/#{member.id}/procedures"   if procedure.member_id != member.id
     end
 
   end
