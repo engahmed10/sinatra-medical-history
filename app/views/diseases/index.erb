@@ -1,6 +1,12 @@
+
+<a href="/members">Go back members</a>
+<h3 class="text_loc">All Diseases</h3>
 <% @all_diseases.each do |dise|%>
-    Disease Name :<br>
+   <div class="his_border"> Disease Name :<br>
     <%=dise.name%><br>
     Discription : <br>
     <%=dise.desc%><br>
+   </div>
 <%end%>
+
+

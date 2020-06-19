@@ -1,9 +1,8 @@
 class UsersController < ApplicationController
 
-
     get '/' do
       
-     erb :'index'
+     erb :"index"
     end
 
 ####signup

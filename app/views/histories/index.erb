@@ -1,4 +1,26 @@
- <div class ="SorL-form">
+
+<ul class="member-index">
+<li class="dropdown">
+<a  class="dropbtn">Histroies</a>
+<div class="dropdown-content">
+<% @member.histories.each_with_index do |his,index| %>
+
+<a class href="/members/<%=@member.id%>/histories/<%=his.id%>"><%=index+1%> - his</a>
+
+<%end%>
+</div>
+</li>
+<li><a href="/members/<%=@member.id%>/histories/new">New history</a></li>
+<li><a href="/members/<%=@member.id%>/procedures"><%=@member.name%>'s procedures</a></h3></li>
+<li><a href="/diseases"> Diseases</a></li>
+<li><a href="/members">Go back to members</a></li>
+</ul>
+ 
+
+
+
+
+
  <div>
       <strong>Name of Member :</strong>
      <%= @member.name %>  &nbsp ,
@@ -6,37 +28,32 @@
      <%= @member.order_age %> ,
       <strong> Kinship :</strong> &nbsp 
      <%= @member.kinship %> 
-<br>
 </div>
-
- <h1>&nbsp &nbsp <%=@member.name%>'s medical history </h1>
+<div class="text_loc">
+ <h2>&nbsp &nbsp <%=@member.name.capitalize%>'s all medical histories </h2>
+</div>
 
 <% @member.histories.each_with_index do |his,index| %>
 <div class="his_border">    
-    <%=index+1 %>&nbsp <strong>doctor name:</strong>&nbsp<%= his.doctor_name %> &nbsp
-    &nbsp&nbsp<strong> doctor description:</strong> &nbsp<%= his.doctor_desc %> &nbsp
-    &nbsp<strong> patient age :</strong><%= his.age_at_visit %> &nbsp
-    &nbsp<strong> date: </strong><%= his.date%>  &nbsp   
-    <h4>disease type :</h4>
+    <%=index+1 %><br> 
+    <strong>Doctor name:</strong>&nbsp<%= his.doctor_name %> &nbsp
+    <strong> Doctor description:</strong> &nbsp<%= his.doctor_desc %> &nbsp
+    <strong> Patient age :</strong><%= his.age_at_visit %> &nbsp
+    <strong> Date: </strong><%= his.date%><br> 
     <%if his.disease != nil%>
-    &nbsp&nbsp <%= his.disease.name %>
-    <h4> disease description :</h4>
-    &nbsp&nbsp<%= his.disease.desc %><br><br>
-    <a  class="link" href="/members/<%=@member.id%>/histories/<%=his.id%>/edit">  <button > update </button>  </a> <br>&nbsp
-   
+    <strong>Disease name :</strong> <%= his.disease.name %><br>
+    <strong>Disease description : </strong><%= his.disease.desc %><br>
+    <%end%> 
+    <a  class="link" href="/members/<%=@member.id%>/histories/<%=his.id%>/edit">  <button > update </button>  </a> 
     <form method="POST" action="/members/<%=@member.id%>/histories/<%=his.id%>">
     <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
     <input type="submit" value="delete"> 
     </form>
 </div>
-    <%end%><br></td>
-
 <%end%>
-<br><br>
-<a href="/members/<%=@member.id%>/histories/new">create new history for <%=@member.name%></a>
-<br><br>
 
-<h3><a href="/members/<%=@member.id%>/procedures">Show me <%=@member.name%>'s procedures</a></h3>
-<a href="/members">Go back to members</a><br><br>
-</div>
+
+
+
+
 

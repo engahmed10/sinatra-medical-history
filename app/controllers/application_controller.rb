@@ -1,5 +1,7 @@
 require './config/environment'
 require "rack-flash"
+require 'sinatra/flash/hash'
+
 class ApplicationController < Sinatra::Base
   use Rack::Flash
 
@@ -8,7 +10,7 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
     enable :sessions
     set :session_secret ,"password_security"
-    use Rack::Flash
+ 
   end
 
 
@@ -19,7 +21,8 @@ class ApplicationController < Sinatra::Base
     end
 
     def authorize_history(member,history)
-      redirect "/members/#{member.id}/histories"  if histroy.member_id != member.id
+      #binding.pry
+      redirect "/members/#{member.id}/histories"  if history.member_id != member.id 
     end
     
     def  authorize_procedure(member,procedure)

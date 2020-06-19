@@ -1,17 +1,33 @@
 
-<div class ="wrap">
+
+
 <% if flash.has?(:message) %>
   <%= flash[:message] %>
 <% end %>
 
 
-
-<%=@history.doctor_name%><br>
-<%=@history.age_at_visit%>
-<br>
-<%=@history.disease.name%>
-
-</div>
-
-
 <a href="/members/<%=@member.id%>/histories"> Go back to see all histories</a>
+
+ <h1 class="text_loc">&nbsp &nbsp <%=@member.name%>'s medical history </h1>
+
+<div class="his_border">    
+
+    &nbsp <strong>doctor name:</strong>&nbsp<%= @history.doctor_name %> &nbsp
+    &nbsp&nbsp<strong> doctor description:</strong> &nbsp<%= @history.doctor_desc %> &nbsp
+    &nbsp<strong> patient age :</strong><%= @history.age_at_visit %> &nbsp
+    &nbsp<strong> date: </strong><%= @history.date%>  &nbsp   
+    <h4>disease type :</h4>
+    <%if @history.disease != nil%>
+    &nbsp&nbsp <%= @history.disease.name %>
+    <h4> disease description :</h4>
+    &nbsp&nbsp<%= @history.disease.desc %><br><br>
+    <%end%>
+    <a class="link" href="/members/<%=@member.id%>/histories/<%=@history.id%>/edit">  <button > update </button>  </a>
+    <br>&nbsp
+
+    <form method="POST" action="/members/<%=@member.id%>/histories/<%=@history.id%>">
+    <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete"> 
+    </form>
+    
+</div>

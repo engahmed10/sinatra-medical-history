@@ -1,8 +1,40 @@
-<div class ="SorL-form">
-<h3>&nbsp &nbsp This is all <%=@member.name%>'s Procedures page</h3>
 
-<% @member.procedures.each_with_index do |pro,index|%>
-<div class="his_border"> 
+
+<ul class="member-index">
+<li class="dropdown">
+<a  class="dropbtn">Procedures</a>
+<div class="dropdown-content">
+<% @member.procedures.each_with_index do |pro,index| %>
+
+<a class href="/members/<%=@member.id%>/procedures/<%=pro.id%>"><%=index+1%> - procedure</a>
+
+<%end%>
+</div>
+</li>
+<li><a href="/members/<%=@member.id%>/procedures/new">New procedure</a></li>
+<li><a href="/members/<%=@member.id%>/histories"><%=@member.name%>'s histories</a></h3></li>
+           
+<li><a href="/members">Go back to members</a></li>
+</ul>
+ 
+
+<li> <div class="index">
+ <div >
+ <div>
+      <strong>Name of Member :</strong>
+     <%= @member.name %>  &nbsp ,
+     <strong> Age order :</strong> &nbsp 
+     <%= @member.order_age %> ,
+      <strong> Kinship :</strong> &nbsp 
+     <%= @member.kinship %> 
+<br>
+</div>
+
+
+ <h1>&nbsp &nbsp <%=@member.name%>'s all medical procedures </h1>
+<% @member.procedures.each_with_index do |pro,index| %>
+
+<div class="his_border">    
 <%=index+1 %><br>
 <strong>Procedure Name :</strong> &nbsp <%=pro.name%><br>
 <strong>Procedure description :</strong> &nbsp<%=pro.desc%><br>
@@ -10,25 +42,25 @@
 <strong>Hospital Name :</strong> &nbsp<%=pro.hospital%><br>
 <strong>Date of procedure :</strong> &nbsp<%=pro.date_porc%><br>
 <strong>Age at procedure :</strong> &nbsp<%=pro.age_at_proc%><br>
-
-<h4>disease type :</h4>
+    
 <%if pro.disease != nil%>
-&nbsp&nbsp<%= pro.disease.name %>
-<h4> disease description :</h4>
-&nbsp&nbsp<%= pro.disease.desc %><br><br>
+    <h4>disease type :</h4>
+    &nbsp&nbsp <%= pro.disease.name %>
+    <h4> disease description :</h4>
+    &nbsp&nbsp<%= pro.disease.desc %><br><br>
+<%end%> 
 
 <a href="/members/<%=@member.id%>/procedures/<%=pro.id%>/edit"><button> update </button></a> &nbsp
 <form method="POST" action="/members/<%=@member.id%>/procedures/<%=pro.id%>">
 <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
 <input type="submit" value="delete"> 
 </form>
-</div>
-<%end%>
-<br>
 
-<%end%>
-<br><br>
-<a href="/members/<%=@member.id%>/procedures/new">create new procedure for <%=@member.name%></a>
-<br><br>
-<a href="/members">members</a><br><br>
+
+
+<%end%> 
 </div>
+
+
+
+

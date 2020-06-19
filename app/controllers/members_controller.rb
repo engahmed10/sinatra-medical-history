@@ -25,7 +25,6 @@ get '/members/new'  do
 end
 
 post '/members' do
-
     if !Helpers.is_logged_in?(session)
         redirect '/login'
     end
@@ -33,11 +32,8 @@ post '/members' do
     user = Helpers.current_user(session)
     member.user = user 
     user.members << member
-    
     redirect '/members'
 end
-
-
 
 
 end

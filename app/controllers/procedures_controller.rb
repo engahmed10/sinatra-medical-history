@@ -18,7 +18,6 @@ class ProceduresController < ApplicationController
 
   # POST: /procedures
   post "/members/:id/procedures" do
-    
     diseases=Helpers.all_desease(session)
     member=Member.find_by_id(params[:id])
     authorize(member)
@@ -53,6 +52,7 @@ class ProceduresController < ApplicationController
        @member=Member.find_by_id(params[:id])
        authorize(@member)
        @procedure = Procedure.find_by_id(params[:id1])
+       authorize_procedure(@member,@procedure)
        @diseases=Helpers.all_desease(session)
        erb :"/procedures/edit"
   end
@@ -63,6 +63,7 @@ class ProceduresController < ApplicationController
     member=Member.find_by_id(params[:id])
     authorize(member)
     procedure=Procedure.find_by_id(params[:id1])
+    authorize_procedure(member,procedure)
     procedure.update(name:params[:name],desc:params[:desc],proce_doctor:params[:proce_doctor],
     hospital:params[:hospital],date_porc:params[:date_porc],age_at_proc:params[:age_at_proc])
 
@@ -83,6 +84,7 @@ class ProceduresController < ApplicationController
     member=Member.find_by_id(params[:id])
     authorize(member)
     procedure=Procedure.find_by_id(params[:id1])
+    authorize_procedure(member,procedure)
     procedure.destroy
     redirect "/members/#{member.id}/procedures"
   end
