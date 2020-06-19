@@ -33,7 +33,8 @@ class ProceduresController < ApplicationController
          
     end
     procedure.save
-    @member.procedures << procedure
+    member.procedures << procedure
+    
     flash[:message]="Successfully created procedure"
     redirect "/members/#{member.id}/procedures/#{procedure.id}"
   end
