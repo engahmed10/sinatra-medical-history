@@ -1,9 +1,8 @@
+<% if !!flash[:notice]  %> 
+<%=  flash[:notice]  %>
+ <% end %>
 
 
-
-<% if flash.has?(:message) %>
-  <%= flash[:message] %>
-<% end %>
 
 
 <a href="/members/<%=@member.id%>/histories"> Go back to see all histories</a>

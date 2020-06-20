@@ -29,7 +29,9 @@ post '/members/:id/histories' do
      end
      @history.save 
      @member.histories << @history
-     flash[:message] = "Successfully created history."
+     flash[:notice] = " Successfully created medical history"
+
+     #binding.pry
   redirect "/members/#{@member.id}/histories/#{@history.id}"
 end
 
