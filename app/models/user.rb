@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
     has_many :members
     validates :username, uniqueness:true
     validates :email ,presence:true
+    validates :username, presence: true
+
 
 
     
