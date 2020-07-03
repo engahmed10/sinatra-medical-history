@@ -6,7 +6,6 @@ class DiseasesController < ApplicationController
         erb :'/diseases/index'
 
     end 
-   
 
     get '/diseases/:id' do
          

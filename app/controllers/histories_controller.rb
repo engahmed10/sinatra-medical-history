@@ -24,7 +24,6 @@ post '/members/:id/histories' do
         disease=Disease.create(name:params["disease"]["name"],desc:params["disease"]["desc"])
         @history.disease= disease 
      else
-       #@history.disease = diseases.find_by_id(disease_id:params["history"]["disease_id"])
         @history.disease = diseases.select{ |dis| params["history"]["disease_id"].to_i == dis.id }.first     
      end
      @history.save 
@@ -71,7 +70,7 @@ patch "/members/:id/histories/:id1"  do
          disease=Disease.create(name:params["disease"]["name"],desc:params["disease"]["desc"])
          @history.disease= disease 
      else
-       # @history.disease = diseases.find_by_id(disease_id:params["history"]["disease_id"])
+       #binding.pry
         @history.disease = diseases.select{ |dis| params["history"]["disease_id"].to_i == dis.id }.first     
      end
 

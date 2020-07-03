@@ -12,8 +12,6 @@ class ApplicationController < Sinatra::Base
     enable :sessions
     set :session_secret ,"password_security"
     register Sinatra::Flash
-
- 
   end
 
 
@@ -37,6 +35,8 @@ class ApplicationController < Sinatra::Base
 
 
 end
+
+
 
 
 

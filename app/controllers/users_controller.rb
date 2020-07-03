@@ -20,7 +20,7 @@ class UsersController < ApplicationController
           redirect '/signup'
        end
        @user = User.new(username:params[:username],email:params[:email],password:params[:password])
-       
+       binding.pry
        if @user.save
            session[:user_id]= @user.id 
            redirect "/members"
@@ -58,7 +58,6 @@ class UsersController < ApplicationController
         session.destroy
         redirect '/'
     end
-
-
+    
 
 end

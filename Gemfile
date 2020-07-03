@@ -19,3 +19,7 @@ group :test do
   gem 'rack-test'
   gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
 end
+group :production do
+  gem 'pg', '0.20.0'
+end
+

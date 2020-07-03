@@ -7,9 +7,9 @@
 <div class="dropdown-content">
 <% @members.each_with_index do |member,index| %>
 <a href='/members/<%= member.id %>/histories'> <%=index+1%> - <%=member.name%> </a>
-
 <%end%>
 </div>
+
 </li>
   <li> <a href="/members/new" class="mem-bar">Create new member</a></li>
   <li><a href="/logout" class="mem-bar">logout</a></li>

@@ -1,4 +1,5 @@
 <form  action="/members/<%= @member.id %>/histories/<%= @history.id %>" method="POST">
+<h3>Update current History :</h3>
 <input type="hidden" id="hidden" name="_method" value="patch">
 <input type="text" name="doctor_desc" value="<%=@history.doctor_desc%>" >
 <input type="text" name="doctor_name" value="<%=@history.doctor_name%>" >
@@ -22,4 +23,3 @@
 
 <input type="submit"  value="update">
 </form>
-
