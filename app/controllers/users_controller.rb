@@ -5,7 +5,6 @@ class UsersController < ApplicationController
      erb :"index"
     end
 
-####signup
     get '/signup'  do
       if  Helpers.is_logged_in?(session)
             redirect "/members"
@@ -20,7 +19,6 @@ class UsersController < ApplicationController
           redirect '/signup'
        end
        @user = User.new(username:params[:username],email:params[:email],password:params[:password])
-       binding.pry
        if @user.save
            session[:user_id]= @user.id 
            redirect "/members"
@@ -30,7 +28,6 @@ class UsersController < ApplicationController
        
     end
 
-    ###login
     get '/login'  do
 
         if  Helpers.is_logged_in?(session)

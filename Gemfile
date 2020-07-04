@@ -48,7 +48,7 @@ group :development do
   gem 'sqlite3', '<1.4'
   gem 'shotgun'
   gem 'tux'
-  #gem 'pry'
+  gem 'pry'
 end
 
 group :test do
