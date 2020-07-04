@@ -1,5 +1,5 @@
 require './config/environment'
-require 'sinatra/flash'
+#require 'sinatra/flash'
 
 
 
@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
     enable :sessions
     #set :session_secret ,"password_security"
     set :session_secret, ENV.fetch('SESSION_SECRET') 
-    register Sinatra::Flash
+    #register Sinatra::Flash
   end
 
 
