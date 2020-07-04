@@ -13,7 +13,7 @@ gem 'bcrypt'
 gem 'tux'
 gem 'sinatra-flash'
 gem 'byebug',  '9.0.6', platform: :mri
-
+gem 'rails_12factor'
 
 group :test do
   gem 'rspec'
