@@ -8,5 +8,5 @@ desc 'drop into the Pry console'
 # Type `rake -T` on your command line to see the available rake tasks.
 
 task :console do
-  Pry.start
+  #Pry.start
 end
