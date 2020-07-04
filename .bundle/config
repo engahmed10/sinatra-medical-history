@@ -1,4 +1,3 @@
 ---
 BUNDLE_BIN: "bin"
-BUNDLE_DEPLOYMENT: "true"
 BUNDLE_PATH: "vendor/bundle"
