@@ -5,14 +5,15 @@ gem 'activerecord', '~> 4.2', '>= 4.2.6', :require => 'active_record'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'rake'
 gem 'require_all'
-gem 'sqlite3', '~> 1.3.6'
+#gem 'sqlite3', '~> 1.3.6'
 gem 'pg', '0.20.0' 
 gem 'thin'
+
 gem 'bcrypt'
 gem 'tux'
 gem 'sinatra-flash'
 gem 'byebug',  '9.0.6', platform: :mri
-gem 'rails_12factor'
+#gem 'rails_12factor'
 
 group :test do
   gem 'rspec'
@@ -22,7 +23,7 @@ group :test do
 end
 
 group :development, :test do
-  #gem 'sqlite3', '1.3.13' 
+  gem 'sqlite3', '1.3.13' 
   gem 'shotgun'
   gem 'pry'
 end
