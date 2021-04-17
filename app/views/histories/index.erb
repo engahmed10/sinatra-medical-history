@@ -1,33 +1,33 @@
 
 <ul class="member-index">
-<li class="dropdown">
-<a  class="dropbtn">Histroies</a>
-<div class="dropdown-content">
-<% @member.histories.each_with_index do |his,index| %>
+        <li class="dropdown">
+        <a  class="dropbtn">Histroies</a>
 
-<a class href="/members/<%=@member.id%>/histories/<%=his.id%>"><%=index+1%> - his</a>
-
-<%end%>
-</div>
-</li>
-<li><a href="/members/<%=@member.id%>/histories/new">New history</a></li>
-<li><a href="/members/<%=@member.id%>/procedures"><%=@member.name%>'s procedures</a></h3></li>
-<li><a href="/diseases"> Diseases</a></li>
-<li><a href="/members">Go back to members</a></li>
+        <div class="dropdown-content">
+        <% @member.histories.each_with_index do |his,index| %>
+        <a class href="/members/<%=@member.id%>/histories/<%=his.id%>"><%=index+1%> - his</a>
+        <%end%>
+        </div>
+        
+        </li>
+        <li><a href="/members/<%=@member.id%>/histories/new">New history</a></li>
+        <li><a href="/members/<%=@member.id%>/procedures"><%=@member.name%>'s procedures</a></h3></li>
+        <li><a href="/diseases"> Diseases</a></li>
+        <li><a href="/members">Go back to members</a></li>
 </ul>
 
  <div>
-      <strong>Name of Member :</strong>
+      <strong>Member's Name :</strong>
      <%= @member.name %>  &nbsp ,
-     <strong> Age order :</strong> &nbsp 
+     <strong> Family Sorting Age :</strong> &nbsp 
      <%= @member.order_age %> ,
       <strong> Kinship :</strong> &nbsp 
      <%= @member.kinship %> 
 </div>
 <div class="text_loc">
- <h2>&nbsp &nbsp <%=@member.name.capitalize%>'s all medical histories </h2>
+ <h2>&nbsp &nbsp <%=@member.name.capitalize%>'s  medical history </h2>
 </div>
-
+ 
 <% @member.histories.each_with_index do |his,index| %>
 <div class="his_border">    
     <%=index+1 %><br> 

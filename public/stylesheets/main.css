@@ -1,171 +1,161 @@
-div.index1{
-  width:  96%;
-  margin: 0%;
-  height: 80%;
-  padding-top: 20px;
-  padding-left: 60px;
-  background-color: rgb(197, 197, 173);
-  border: 2px solid rgb(136, 52, 52);
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
 }
 
-.welc{
+bod{
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
 
-  text-align: center;
-  margin: 2%;
-  padding-top: 30px;
-  
 }
+
+div.index1 {
+    width: 96%;
+    margin: 0%;
+    height: 80%;
+    padding-top: 20px;
+    padding-left: 60px;
+    background-color: rgb(197, 197, 173);
+    border: 2px solid rgb(136, 52, 52);
+}
+
+
 
 a.link:hover {
-   color: #00FF00; 
-  }
-
-body{
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-image: repeating-radial-gradient(rgb(173, 215, 241), rgb(202, 201, 211) , rgba(45, 105, 233, 0.425));
-  //background-image: url("https://i.ibb.co/cbYJb1K/free-medical-powerpoint-template-designs-95625.jpg");
+    color: #00FF00;
 }
 
-
-footer
-{
-  padding-top: 550px;
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: repeating-radial-gradient(rgb(173, 215, 241), rgb(202, 201, 211), rgba(45, 105, 233, 0.425));
 }
 
-
-.text_loc
-{
-  text-align: center;
+.footer {
+    padding-top: 550px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-
-.member{
-  width: 600px;
-  margin: auto;
-  //border: 2px solid rgb(136, 52, 52);
-  padding: 2rem;
-  //background: #ffffff;
+.text_loc {
+    text-align: center;
 }
 
-
-
-.SorL-form{
-  width: 600px;
-  margin: auto;
-  border: 1px solid rgb(88, 130, 194);
-  padding: 2rem;
-  background: #ffffff;
+.member {
+    width: 600px;
+    margin: auto;
+    padding: 2rem;
 }
 
+.SorL-form {
+    width: 600px;
+    margin: auto;
+    border: 1px solid rgb(88, 130, 194);
+    padding: 2rem;
+    background: #ffffff;
+}
 
 div.his_border {
-  border-style: ridge;
-  width: 90%;
-  line-height:20px;
-  border-width: 4px;
-  text-align: left;
-  margin: auto;
-}
-
-.wrap {
-
-  position: absolute;
-  width: 70%;
- // height: 50%;
-  box-sizing: border-box;
-  margin: 150px;
-}
-
-.wrap1 {
-  right: 200px;
-  top: auto;
-  position: absolute;
-  width: 70%;
-  height: 50%;
-  box-sizing: border-box;
-  margin: auto%;
+    border-style: ridge;
+    width: 90%;
+    line-height: 20px;
+    border-width: 4px;
+    text-align: left;
+    margin: auto;
 }
 
 
-.form-in{
-  background: #e3eef1;
-  border: 1px solid #eeeeee;
-  padding: 12px;
-  width: 95%;
-  
-}
-.form-g{
-  margin-bottom: 2rem;
-}
-.form-b{
-  background: #69d2e7;
-  border: 1px solid #ddd;
-  color: #ffffff;
-  padding: 10px;
-  width: 100%;
-  text-transform: uppercase;
-}
-.form-b:hover{
-  background: #0a3a49;
-}
-.form-h{
-  text-align: center;
-  margin-bottom : 2rem;
+
+.form-in {
+    background: #e3eef1;
+    border: 1px solid #eeeeee;
+    padding: 12px;
+    width: 95%;
 }
 
+.form-g {
+    margin-bottom: 2rem;
+}
+
+.form-b {
+    background: #69d2e7;
+    border: 1px solid #ddd;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.form-b:hover {
+    background: #0a3a49;
+}
+
+.form-h {
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
 ul.member-index {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(83, 127, 223);
-}
-li.dropdown {
-  float: left;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(83, 127, 223);
 }
 
-li a{
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.dropdown {
+    float: left;
 }
-li a:hover, .dropdown:hover {
-  background-color: red;
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover {
+    background-color: red;
 }
 
 li {
-  display: inline-block;
+    display: inline-block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
-p.wel{
-  text-align: center;
-//margin: 10px;
+.wrap {
+    position: static;
+    width: 70%;
+    height: 50%;
+    box-sizing: border-box;
+    margin: 150px;
 }

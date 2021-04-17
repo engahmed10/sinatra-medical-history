@@ -1,38 +1,42 @@
+<link rel="stylesheet" href="/stylesheets/welcome.css" />
 
-<div class="welc"><h2>Welcome Sinatra Medical Family History App!</h2>
-<h4>&nbsp &nbsp &nbsp  This app help you to track your family  medical history records </h4>
+<div class="header">
+     <h2>Welcome Sinatra Medical Family History App!</h2>
+     <h4> This app help you to track your family  medical history records </h4>
 </div>
+
 <br>
+
 <%if Helpers.is_logged_in?(session) %>
-  <div class="welc"> <a  href="/members">Members</a><br><br>
-   <a  href="/logout">Log out</a>
+   <div class="welc"> <a  href="/members">Members</a><br><br>
+       <a  href="/logout">Log out</a>
    </div>
 <%else%>
    <div class="wrap1">
 
-   <form class="SorL-form" method="POST" action="/signup">
-   
-   <div class="form-h">
-   <h2 >Signup to access your account</h2>
-   </div>
-   
-   <div class="form-g">
-   <input class="form-in"  type="text" name="username" placeholder="username">
-   </div>
-   
-   <div class="form-g">
-   <input class="form-in"  type="text" name="email"  placeholder="email">
-   </div>
-   
-   <div class="form-g">
-   <input class="form-in"  type="text" name="password"  placeholder="password">
-   </div>
-   
-   <div class="form-g">
-   <input class="form-b" type="submit" value="Sign up">
-   </div>
-   </form>
-   <p class="wel">Already registered? <a href="/login">Log in</a></p>
+         <form class="SorL-form" method="POST" action="/signup">
+         
+               <div class="form-h">
+               <h2 >Signup to access your account</h2>
+               </div>
+               
+               <div class="form-g">
+               <input class="form-in"  type="text" name="username" placeholder="username">
+               </div>
+               
+               <div class="form-g">
+               <input class="form-in"  type="text" name="email"  placeholder="email">
+               </div>
+               
+               <div class="form-g">
+               <input class="form-in"  type="text" name="password"  placeholder="password">
+               </div>
+               
+               <div class="form-g">
+               <input class="form-b" type="submit" value="Sign up">
+               </div>
+         </form>
+      <p class="wel">Already Registered? <a href="/login">Log in</a></p>
    </div>                                    
    <br> 
    

@@ -20,17 +20,20 @@ post '/members/:id/histories' do
      diseases= Helpers.all_desease(session)
      @history=History.create(doctor_desc:params[:doctor_desc],doctor_name:params[:doctor_name],
         age_at_visit:params[:age_at_visit],date:params[:date])
-     if params["disease"]["name"] != ""
-        disease=Disease.create(name:params["disease"]["name"],desc:params["disease"]["desc"])
-        @history.disease= disease 
+     if params["disease"]["name"] != "" 
+        disease = Disease.create(name:params["disease"]["name"],desc:params["disease"]["desc"])
+        @history.disease = disease 
      else
-        @history.disease = diseases.select{ |dis| params["history"]["disease_id"].to_i == dis.id }.first     
+
+       if params["history"]  != nil 
+          @history.disease = diseases.select{ |dis| params["history"]["disease_id"].to_i == dis.id }.first 
+        else
+          redirect "/members/#{@member.id}/histories/new"     
+        end
      end
      @history.save 
      @member.histories << @history
-     #flash[:notice] = " Successfully created medical history"
 
-     #binding.pry
   redirect "/members/#{@member.id}/histories/#{@history.id}"
 end
 
@@ -38,7 +41,7 @@ get  "/members/:id/histories/:id1"  do
       @member = Member.find(params[:id]) 
       authorize(@member)
       @history=History.find(params[:id1])
-     # binding.pry
+
       authorize_history(@member,@history)
       @disease = @history.disease  
   erb :'histories/show'

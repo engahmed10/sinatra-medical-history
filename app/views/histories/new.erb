@@ -1,13 +1,13 @@
 
 
-<form class="SorL-form" method="POST" action="/members/<%= @member.id %>/histories">
+<form class="SorL-form" method="POST" action="/members/<%= @member.id %>
+/histories">
 <h3>Create new History :</h3>
 <input type="text" name="doctor_name" placeholder="doctor name" >
 <input type="text" name="doctor_desc" placeholder="doctor desc" >
 <input type="text" name="age_at_visit" placeholder="age at visit" >
 <input type="text" name="date" placeholder="date" >
 <br>
-
 <h3>Choose from Existing Diseases :</h3>
 <% @diseases.each do |dis| %>
 <input type ="checkbox"  name="history[disease_id]"  id="<%= dis.id %>" value="<%= dis.id %>">
@@ -15,11 +15,9 @@
 <%=dis.desc%><br>
 </input>
 <%end%>
-
 <h3> Or craete new disease :</h3>
 <input type="text" name="disease[name]" placeholder="disease name">
 <input type="text" name="disease[desc]"  placeholder="disease description">
-
 <input type="submit" value="create">
 </form>
 

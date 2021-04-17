@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
     end
 
     def authorize_history(member,history)
-      #binding.pry
+    
       redirect "/members/#{member.id}/histories"  if history.member_id != member.id 
     end
     

@@ -1,0 +1,47 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+ }
+
+
+*{
+    background-color: rgb(78, 180, 55);
+}
+
+ .header{
+  font-size: 20px;
+  margin-left: 25rem;
+
+  
+ }
+
+ .welc {
+    text-align: center;
+    margin: 2rem;
+    padding-top: 30px;
+}
+
+.login-link {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.wrap {
+    position: static;
+    width: 70%;
+    height: 50%;
+    box-sizing: border-box;
+    margin: 150px;
+}
+
+.wrap1 {
+    right: 200px;
+    top: auto;
+    position: absolute;
+    width: 70%;
+    height: 50%;
+    box-sizing: border-box;
+    margin: auto%;
+}

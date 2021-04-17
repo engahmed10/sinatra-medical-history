@@ -55,6 +55,8 @@ $git push
 
 $corneal model users
 -add spec from repository 
+-add other models file(procedure,history,disease,member)
+
 
 
 
