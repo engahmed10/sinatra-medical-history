@@ -1,20 +1,10 @@
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
- }
-
-
-*{
-    background-color: rgb(78, 180, 55);
-}
+@import url('./main.css');
 
  .header{
   font-size: 20px;
   margin-left: 25rem;
 
-  
  }
 
  .welc {
@@ -26,14 +16,6 @@
 .login-link {
     text-align: center;
     padding-bottom: 2rem;
-}
-
-.wrap {
-    position: static;
-    width: 70%;
-    height: 50%;
-    box-sizing: border-box;
-    margin: 150px;
 }
 
 .wrap1 {

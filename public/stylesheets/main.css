@@ -1,15 +1,31 @@
 
+
 *{
    margin:0;
    padding:0;
    box-sizing: border-box;
 }
 
-bod{
-    font-size: 16px;
-    line-height: 1.7;
-    color: #777;
 
+html{
+    font-size: 60%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Lato","sans-serif"; 
+    font-weight: 400;
+    line-height: 1.7; 
+    color: rgb(35, 47, 45);
+}
+
+header{
+   background-image: linear-gradient(to right,
+   rgba(35, 134, 152, 0.887),
+   #28b485c6), 
+   url(../images/Medical-Background.jpg);
+   background-size:cover;
+   
 }
 
 div.index1 {
@@ -18,8 +34,6 @@ div.index1 {
     height: 80%;
     padding-top: 20px;
     padding-left: 60px;
-    background-color: rgb(197, 197, 173);
-    border: 2px solid rgb(136, 52, 52);
 }
 
 
@@ -28,12 +42,7 @@ a.link:hover {
     color: #00FF00;
 }
 
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-image: repeating-radial-gradient(rgb(173, 215, 241), rgb(202, 201, 211), rgba(45, 105, 233, 0.425));
-}
+
 
 .footer {
     padding-top: 550px;
@@ -54,7 +63,7 @@ body {
 .SorL-form {
     width: 600px;
     margin: auto;
-    border: 1px solid rgb(88, 130, 194);
+    //border: 1px solid rgb(88, 130, 194);
     padding: 2rem;
     background: #ffffff;
 }
@@ -82,7 +91,7 @@ div.his_border {
 }
 
 .form-b {
-    background: #69d2e7;
+ //   background: #69d2e7;
     border: 1px solid #ddd;
     color: #ffffff;
     padding: 10px;
@@ -103,7 +112,6 @@ ul.member-index {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(83, 127, 223);
 }
 
 .dropdown {
