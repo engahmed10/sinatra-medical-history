@@ -17,6 +17,8 @@ body{
     font-weight: 400;
     line-height: 1.7; 
     color: rgb(35, 47, 45);
+    padding: 20px;
+
 }
 
 header{
@@ -25,6 +27,7 @@ header{
    #28b485c6), 
    url(../images/Medical-Background.jpg);
    background-size:cover;
+   background-position: top;
    
 }
 
@@ -60,13 +63,7 @@ a.link:hover {
     padding: 2rem;
 }
 
-.SorL-form {
-    width: 600px;
-    margin: auto;
-    //border: 1px solid rgb(88, 130, 194);
-    padding: 2rem;
-    background: #ffffff;
-}
+
 
 div.his_border {
     border-style: ridge;
@@ -78,35 +75,6 @@ div.his_border {
 }
 
 
-
-.form-in {
-    background: #e3eef1;
-    border: 1px solid #eeeeee;
-    padding: 12px;
-    width: 95%;
-}
-
-.form-g {
-    margin-bottom: 2rem;
-}
-
-.form-b {
- //   background: #69d2e7;
-    border: 1px solid #ddd;
-    color: #ffffff;
-    padding: 10px;
-    width: 100%;
-    text-transform: uppercase;
-}
-
-.form-b:hover {
-    background: #0a3a49;
-}
-
-.form-h {
-    text-align: center;
-    margin-bottom: 2rem;
-}
 
 ul.member-index {
     margin: 0;

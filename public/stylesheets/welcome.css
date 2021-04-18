@@ -2,9 +2,40 @@
 @import url('./main.css');
 
  .header{
-  font-size: 20px;
-  margin-left: 25rem;
+ 
+    text-transform: uppercase;
+    color: white;
+    background-position: top;
 
+ }
+
+ .header-main{
+    display: block;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+
+ }
+
+ .header-sub{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    padding-bottom: 10%;
+    margin-left: 5rem;
+
+ }
+
+ .text-box{
+     position: absolute;
+     left: 20%;
+     top: 20%;
+     text-align:center;
+ }
+
+ h4{
+     margin-left: 2rem;
  }
 
  .welc {
@@ -13,17 +44,60 @@
     padding-top: 30px;
 }
 
+
 .login-link {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-variant-caps:titling-caps;
     text-align: center;
-    padding-bottom: 2rem;
+    margin: 5rem;
 }
 
-.wrap1 {
-    right: 200px;
-    top: auto;
-    position: absolute;
-    width: 70%;
-    height: 50%;
-    box-sizing: border-box;
-    margin: auto%;
+a {
+    text-decoration:none;
+    font-size:2rem;
 }
+
+
+
+
+form {
+    width: 600px;
+    margin: auto;
+    margin-top: 30rem;
+    border: 3px solid rgb(75, 167, 190);
+    border-radius: 10px;
+    padding: 2rem;
+    background: #f8fafb;
+}
+
+
+form :nth-last-child(5) {
+    margin-left: 8em;
+    padding:5rem ;
+   
+}
+.form-input {
+    background: rgba(35, 134, 152, 0.887),
+    border: 1px solid #7d2e2e;
+    padding: 1.5rem;
+    width: 95%;
+    margin-left: 1rem;
+    text-align:center;
+}
+
+
+.div-btn :first-child{
+  width: 5em;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  width: 10rem;
+  max-height: 10rem;
+  text-transform: uppercase;
+}
+
+.form-b:hover {
+    background: #0a3a49;
+    
+}
+

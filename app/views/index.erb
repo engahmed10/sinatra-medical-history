@@ -1,8 +1,10 @@
 
 <div class="header">
-     <h2>Welcome Sinatra Medical Family History App!</h2>
-     <h4> This app help you to track your family  medical history records </h4>
-</div>
+   <div  class="text-box">
+     <span  class="header-main" >Welcome To Sinatra Medical Family History App!</span>
+     <span  class="header-sub"> This app  will help you to track your family  medical history records </span>
+      </div>
+ </div>
 
 <br>
 
@@ -11,31 +13,34 @@
        <a  href="/logout">Log out</a>
    </div>
 <%else%>
-   <div class="wrap1">
 
-         <form class="SorL-form" method="POST" action="/signup">
+   <div class="form-container">
+
+         <form method="POST" action="/signup">
          
-               <div class="form-h">
-               <h2 >Signup to access your account</h2>
+               <div class="form-header">
+                   <h2 >Signup to access your account</h2>
                </div>
                
                <div class="form-g">
-               <input class="form-in"  type="text" name="username" placeholder="username">
+                  <input class="form-input"  type="text" name="username" placeholder="username">
                </div>
                
                <div class="form-g">
-               <input class="form-in"  type="text" name="email"  placeholder="email">
+                   <input class="form-input"  type="text" name="email"  placeholder="email">
                </div>
                
                <div class="form-g">
-               <input class="form-in"  type="text" name="password"  placeholder="password">
+                   <input class="form-input"  type="text" name="password"  placeholder="password">
                </div>
                
-               <div class="form-g">
-               <input class="form-b" type="submit" value="Sign up">
+                <div class="div-btn">
+                  <input class="form-btn" type="submit" value="Sign up">
                </div>
+
          </form>
-      <p class="login-link">Already Registered? <a href="/login">Log in</a> </p>
+
+      <p class="login-link">Already Registered? <a href="/login">Login</a> </p>
    </div>                                    
    <br> 
    
