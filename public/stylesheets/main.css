@@ -45,7 +45,8 @@ a.link:hover {
 
 
 .footer {
-    padding-top: 550px;
+    height: 0;
+  
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -54,11 +55,7 @@ a.link:hover {
     text-align: center;
 }
 
-.member {
-    width: 600px;
-    margin: auto;
-    padding: 2rem;
-}
+
 
 
 
@@ -71,13 +68,6 @@ div.his_border {
     margin: auto;
 }
 
-
-
-ul.member-index {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
 
 .dropdown {
     float: left;

@@ -1,19 +1,26 @@
-<p class="wel">WELCOME <%=@user.username.upcase%> !<p>
 
-<ul class="member-index">
-    
-      <li class="dropdown">
-          <a>Family Members</a>
+<div  class="member-container">
 
-          <div class="dropdown-content">
-              <% @members.each_with_index do |member,index| %>
-              <a href='/members/<%= member.id %>/histories'> <%=index+1%> - <%=member.name%> </a>
-              <%end%>
-          </div>
+    <ul class="member-k">
+        <li class="dropdown">
+            <a>Family Members</a>
 
-      </li>
+            <div class="dropdown-content">
+                <% @members.each_with_index do |member,index| %>
+                    <a href='/members/<%= member.id %>/histories'> <%=index+1%> - <%=member.name%> </a>
+                <%end%>
+            </div>
 
-      <li> <a href="/members/new" class="mem-bar">Create New Member</a></li>
-      <li><a href="/logout" class="mem-bar">Logout</a></li>
-</ul>
+        </li>
 
+        <li> <a href="/members/new" class="mem-bar">Create New Member</a></li>
+        <li><a href="/logout" class="mem-bar">Logout</a></li>
+    </ul>
+
+    <div  class="header-member">
+        <div class="text-box-header-member">  
+            <p class="header-main">WELCOME <%=@user.username.upcase%> !<p>
+         </div>
+     </div>
+
+</div>
