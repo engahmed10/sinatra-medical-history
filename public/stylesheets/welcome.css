@@ -38,10 +38,6 @@
      text-align:center;
  }
 
- h4{
-     margin-left: 2rem;
- }
-
 
 .login-link {
     font-family: 'Courier New', Courier, monospace;
@@ -55,13 +51,13 @@
     animation-delay:0.5s;
 }
 
-a {
+.login-link a {
     text-decoration:none;
     font-size:2rem;
 }
 
 
-form {
+.signup-form {
     width: 600px;
     margin: auto;
     margin-top: 30rem;
@@ -72,9 +68,17 @@ form {
 }
 
 
+
+.signup-form-error {
+    width: 600px;
+    margin-left: 30rem;
+}
+
+
+
 form :nth-last-child(5) {
     margin-left: 8em;
-    padding:5rem ;
+    padding:5rem
    
 }
 .form-input {
