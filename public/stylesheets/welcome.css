@@ -14,7 +14,7 @@
     font-weight: 400;
     font-size: 2rem;
     letter-spacing: 1rem;
-    animation-name: moveLeft;
+    animation-name: moveLeft ;
     animation-duration: 1s;
 
  }
@@ -42,12 +42,6 @@
      margin-left: 2rem;
  }
 
- .welc {
-    text-align: center;
-    margin: 2rem;
-    padding-top: 30px;
-}
-
 
 .login-link {
     font-family: 'Courier New', Courier, monospace;
@@ -55,6 +49,10 @@
     font-variant-caps:titling-caps;
     text-align: center;
     margin: 5rem;
+    animation-name: moveBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay:0.5s;
 }
 
 a {
@@ -100,16 +98,19 @@ form :nth-last-child(5) {
 
 .form-b:hover {
     background: #0a3a49;
-    
 }
 
 
 @keyframes moveLeft {
 
-
    0%{
       opacity: 0;
       transform:translateX(-50%);
+
+   }
+
+   80%{
+    transform:translate(20%)
 
    }
 
@@ -124,7 +125,6 @@ form :nth-last-child(5) {
 
 @keyframes moveRight {
 
-
     0%{
        opacity: 0;
        transform:translateX(50%);
@@ -138,3 +138,22 @@ form :nth-last-child(5) {
  
  
  }
+
+
+@keyframes moveBottom {
+
+    0%{
+       opacity: 0;
+       transform:translateY(50%);
+ 
+    }
+ 
+    100%{
+       opacity:1;
+       transform:translate(0);
+    }
+ 
+ 
+ }
+
+
