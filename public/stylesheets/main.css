@@ -28,14 +28,6 @@ header{
    background-position: top;
 }
 
-div.index1 {
-    width: 96%;
-    margin: 0%;
-    height: 80%;
-    padding-top: 20px;
-    padding-left: 60px;
-}
-
 
 
 a.link:hover {
@@ -58,15 +50,6 @@ a.link:hover {
 
 
 
-
-div.his_border {
-    border-style: ridge;
-    width: 90%;
-    line-height: 20px;
-    border-width: 4px;
-    text-align: left;
-    margin: auto;
-}
 
 
 .dropdown {

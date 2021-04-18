@@ -1,4 +1,4 @@
-
+<div class="history">
 <ul class="member-index">
         <li class="dropdown">
         <a  class="dropbtn">Histroies</a>
@@ -24,31 +24,36 @@
       <strong> Kinship :</strong> &nbsp 
      <%= @member.kinship %> 
 </div>
+
 <div class="text_loc">
- <h2>&nbsp &nbsp <%=@member.name.capitalize%>'s  medical history </h2>
+ <h2>&nbsp &nbsp <%=@member.name.capitalize%>'s  Medical History </h2>
 </div>
- 
+
+<div class="histories">
 <% @member.histories.each_with_index do |his,index| %>
-<div class="his_border">    
-    <%=index+1 %><br> 
-    <strong>Doctor name:</strong>&nbsp<%= his.doctor_name %> &nbsp
-    <strong> Doctor description:</strong> &nbsp<%= his.doctor_desc %> &nbsp
-    <strong> Patient age :</strong><%= his.age_at_visit %> &nbsp
-    <strong> Date: </strong><%= his.date%><br> 
-    <%if his.disease != nil%>
-    <strong>Disease name :</strong> <%= his.disease.name %><br>
-    <strong>Disease description : </strong><%= his.disease.desc %><br>
-    <%end%> 
-    <a  class="link" href="/members/<%=@member.id%>/histories/<%=his.id%>/edit">  <button > update </button>  </a> 
-    <form method="POST" action="/members/<%=@member.id%>/histories/<%=his.id%>">
-    <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="delete"> 
-    </form>
-</div>
+    <div class="history-card">    
+        <%=index+1 %><br> 
+            <strong>Doctor name:</strong>&nbsp<%= his.doctor_name %> &nbsp <br>
+            <strong> Doctor description:</strong> &nbsp<%= his.doctor_desc %> &nbsp <br>
+            <strong> Patient age :</strong><%= his.age_at_visit %> &nbsp <br>
+            <strong> Date: </strong><%= his.date%><br> 
+        <%if his.disease != nil%>
+            <strong>Disease name :</strong> <%= his.disease.name %><br>
+            <strong>Disease description : </strong><%= his.disease.desc %><br>
+        <%end%> 
+        <div>
+        <a  class="link" href="/members/<%=@member.id%>/histories/<%=his.id%>/edit">  <button > update </button>  </a> 
+   
+        <form method="POST" action="/members/<%=@member.id%>/histories/<%=his.id%>">
+            <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="delete"> 
+        </form>
+        </div>
+
+    </div>
 <%end%>
+</div>
 
-
-
-
+</div>
 
 
