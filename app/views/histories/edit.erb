@@ -1,25 +1,23 @@
-<form  action="/members/<%= @member.id %>/histories/<%= @history.id %>" method="POST">
-<h3>Update current History :</h3>
-<input type="hidden" id="hidden" name="_method" value="patch">
-<input type="text" name="doctor_desc" value="<%=@history.doctor_desc%>" >
-<input type="text" name="doctor_name" value="<%=@history.doctor_name%>" >
-<input type="text" name="age_at_visit" value="<%=@history.age_at_visit%>">
-<input type="text" name="date" value="<%=@history.date%>" >
+<form  class="new-form"  action="/members/<%= @member.id %>/histories/<%= @history.id %>" method="POST">
+    <h3>Update current History :</h3>
+    <input type="hidden" id="hidden" name="_method" value="patch">
+    <input type="text" name="doctor_desc" value="<%=@history.doctor_desc%>" >
+    <input type="text" name="doctor_name" value="<%=@history.doctor_name%>" >
+    <input type="text" name="age_at_visit" value="<%=@history.age_at_visit%>">
+    <input type="text" name="date" value="<%=@history.date%>" >
+
+    <h3>Choose from Existing Diseases :</h3>
+    <% @diseases.each do |dis| %>
+    <input type ="checkbox"  name="history[disease_id]"  id="<%= dis.id %>" value="<%= dis.id %>">
+    <%=dis.name%><br>
+    <%=dis.desc%><br>
+    </input>
+    <%end%>
+
+    <h3> Or craete new disease :</h3>
+    <input type="text" name="disease[name]" placeholder="disease name">
+    <input type="text" name="disease[desc]"  placeholder="disease description">
 
 
-
-<h3>Choose from Existing Diseases :</h3>
-<% @diseases.each do |dis| %>
-<input type ="checkbox"  name="history[disease_id]"  id="<%= dis.id %>" value="<%= dis.id %>">
-<%=dis.name%><br>
-<%=dis.desc%><br>
-</input>
-<%end%>
-
-<h3> Or craete new disease :</h3>
-<input type="text" name="disease[name]" placeholder="disease name">
-<input type="text" name="disease[desc]"  placeholder="disease description">
-
-
-<input type="submit"  value="update">
+    <input class="btn-his" type="submit"  value="update">
 </form>

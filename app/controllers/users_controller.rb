@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
 
     get '/' do
-
-     erb :"index"
+      erb :"index"
     end
 
     get '/signup'  do
@@ -14,16 +13,13 @@ class UsersController < ApplicationController
 
     end 
     
-    post '/signup'  do
-       if params[:username] == "" || params[:email] == "" || params[:password] == ""
-          redirect '/signup'
-       end
+    post '/'  do
        @user = User.new(username:params[:username],email:params[:email],password:params[:password])
        if @user.save
            session[:user_id]= @user.id 
            redirect "/members"
        else
-           redirect '/signup' 
+           redirect '/' 
        end
        
     end

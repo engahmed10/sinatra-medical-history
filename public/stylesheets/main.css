@@ -7,26 +7,28 @@
 
 html{
     font-size: 60%;
+    scroll-behavior: smooth;
+  
 }
 
 body{
+
     font-size: 1.6rem;
     font-family: "Lato","sans-serif"; 
     font-weight: 400;
     line-height: 1.7; 
     color: rgb(35, 47, 45);
     padding: 20px;
-
+    background-image: linear-gradient(to right,
+    rgba(35, 134, 152, 0.887),
+    #28b485c6), 
+    url(../images/Medical-Background.jpg);
+    background-size:cover;
+    background-position: top;
+  
 }
 
-header{
-   background-image: linear-gradient(to right,
-   rgba(35, 134, 152, 0.887),
-   #28b485c6), 
-   url(../images/Medical-Background.jpg);
-   background-size:cover;
-   background-position: top;
-}
+
 
 
 
@@ -38,18 +40,14 @@ a.link:hover {
 
 .footer {
     height: 0;
-  
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
 }
 
 .text_loc {
     text-align: center;
 }
-
-
-
-
 
 
 .dropdown {
@@ -66,7 +64,7 @@ li a {
 
 li a:hover,
 .dropdown:hover {
-    background-color: red;
+    background-color: rgb(51, 53, 53);
 }
 
 li {

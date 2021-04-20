@@ -3,7 +3,7 @@
 
  <h1 class="text_loc">&nbsp &nbsp <%=@member.name%>'s medical history </h1>
 
-<div class="his_border">    
+<div class="history-card">    
 
     &nbsp <strong>doctor name:</strong>&nbsp<%= @history.doctor_name %> &nbsp
     &nbsp&nbsp<strong> doctor description:</strong> &nbsp<%= @history.doctor_desc %> &nbsp
@@ -15,12 +15,12 @@
     <h4> disease description :</h4>
     &nbsp&nbsp<%= @history.disease.desc %><br><br>
     <%end%>
-    <a class="link" href="/members/<%=@member.id%>/histories/<%=@history.id%>/edit">  <button > update </button>  </a>
+    <a class="btn-his" class="link" href="/members/<%=@member.id%>/histories/<%=@history.id%>/edit">  <button > update </button>  </a>
     <br>&nbsp
 
     <form method="POST" action="/members/<%=@member.id%>/histories/<%=@history.id%>">
     <input ="text" id="hidden" type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="delete"> 
+    <input  type="submit" value="delete"> 
     </form>
     
 </div>
